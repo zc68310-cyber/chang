@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-31T22:59:25.7487391+10:00",
+  "title": "Design System: Chang Zhou Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Field Ink",
+        "canonical": "#0C0C0C",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(47% 0 0)", "oklch(59% 0 0)", "oklch(71% 0 0)", "oklch(83% 0 0)", "oklch(95% 0 0)"]
+      },
+      "silver": {
+        "role": "neutral",
+        "displayName": "Editorial Silver",
+        "canonical": "#D7E2EA",
+        "tonalRamp": ["oklch(15% 0.012 240)", "oklch(25% 0.012 240)", "oklch(35% 0.012 240)", "oklch(47% 0.012 240)", "oklch(59% 0.012 240)", "oklch(71% 0.012 240)", "oklch(83% 0.012 240)", "oklch(95% 0.012 240)"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "#F5F4F0",
+        "tonalRamp": ["oklch(15% 0.008 90)", "oklch(25% 0.008 90)", "oklch(35% 0.008 90)", "oklch(47% 0.008 90)", "oklch(59% 0.008 90)", "oklch(71% 0.008 90)", "oklch(83% 0.008 90)", "oklch(95% 0.008 90)"]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Pure White",
+        "canonical": "#FFFFFF",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(47% 0 0)", "oklch(59% 0 0)", "oklch(71% 0 0)", "oklch(83% 0 0)", "oklch(95% 0 0)"]
+      },
+      "violet": {
+        "role": "primary",
+        "displayName": "Signal Violet",
+        "canonical": "#B600A8",
+        "tonalRamp": ["oklch(15% 0.12 330)", "oklch(25% 0.16 330)", "oklch(35% 0.2 330)", "oklch(47% 0.24 330)", "oklch(59% 0.22 330)", "oklch(71% 0.17 330)", "oklch(83% 0.1 330)", "oklch(95% 0.035 330)"]
+      },
+      "violet-deep": {
+        "role": "primary",
+        "displayName": "Deep Electric Violet",
+        "canonical": "#7621B0",
+        "tonalRamp": ["oklch(15% 0.1 305)", "oklch(25% 0.14 305)", "oklch(35% 0.18 305)", "oklch(47% 0.21 305)", "oklch(59% 0.19 305)", "oklch(71% 0.15 305)", "oklch(83% 0.09 305)", "oklch(95% 0.03 305)"]
+      },
+      "ember": {
+        "role": "secondary",
+        "displayName": "Ember Orange",
+        "canonical": "#BE4C00",
+        "tonalRamp": ["oklch(15% 0.08 45)", "oklch(25% 0.12 45)", "oklch(35% 0.16 45)", "oklch(47% 0.19 45)", "oklch(59% 0.18 45)", "oklch(71% 0.14 45)", "oklch(83% 0.08 45)", "oklch(95% 0.025 45)"]
+      },
+      "project-surface": {
+        "role": "neutral",
+        "displayName": "Project Surface",
+        "canonical": "#131313",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(47% 0 0)", "oklch(59% 0 0)", "oklch(71% 0 0)", "oklch(83% 0 0)", "oklch(95% 0 0)"]
+      },
+      "media-surface": {
+        "role": "neutral",
+        "displayName": "Media Surface",
+        "canonical": "#171717",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(47% 0 0)", "oklch(59% 0 0)", "oklch(71% 0 0)", "oklch(83% 0 0)", "oklch(95% 0 0)"]
+      },
+      "browser-surface": {
+        "role": "neutral",
+        "displayName": "Browser Surface",
+        "canonical": "#181818",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(47% 0 0)", "oklch(59% 0 0)", "oklch(71% 0 0)", "oklch(83% 0 0)", "oklch(95% 0 0)"]
+      },
+      "modal-surface": {
+        "role": "neutral",
+        "displayName": "Modal Surface",
+        "canonical": "#111111",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(47% 0 0)", "oklch(59% 0 0)", "oklch(71% 0 0)", "oklch(83% 0 0)", "oklch(95% 0 0)"]
+      },
+      "rule-on-dark": {
+        "role": "neutral",
+        "displayName": "Dark-Field Rule",
+        "canonical": "rgba(215, 226, 234, 0.15)",
+        "tonalRamp": ["oklch(15% 0.012 240)", "oklch(25% 0.012 240)", "oklch(35% 0.012 240)", "oklch(47% 0.012 240)", "oklch(59% 0.012 240)", "oklch(71% 0.012 240)", "oklch(83% 0.012 240)", "oklch(95% 0.012 240)"]
+      },
+      "rule-on-light": {
+        "role": "neutral",
+        "displayName": "Paper-Field Rule",
+        "canonical": "rgba(12, 12, 12, 0.15)",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(47% 0 0)", "oklch(59% 0 0)", "oklch(71% 0 0)", "oklch(83% 0 0)", "oklch(95% 0 0)"]
+      },
+      "glass-on-dark": {
+        "role": "neutral",
+        "displayName": "Dark Glass",
+        "canonical": "rgba(255, 255, 255, 0.035)",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(47% 0 0)", "oklch(59% 0 0)", "oklch(71% 0 0)", "oklch(83% 0 0)", "oklch(95% 0 0)"]
+      },
+      "focus-lilac": {
+        "role": "primary",
+        "displayName": "Focus Lilac",
+        "canonical": "#E6A9F1",
+        "tonalRamp": ["oklch(15% 0.06 315)", "oklch(25% 0.08 315)", "oklch(35% 0.1 315)", "oklch(47% 0.12 315)", "oklch(59% 0.13 315)", "oklch(71% 0.12 315)", "oklch(83% 0.08 315)", "oklch(95% 0.025 315)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Editorial Display", "purpose": "Oversized section nameplates and contact statements." },
+      "headline": { "displayName": "Evidence Headline", "purpose": "Chinese project and company names." },
+      "title": { "displayName": "System Title", "purpose": "Compact capability and component titles." },
+      "body": { "displayName": "Chinese Reading", "purpose": "Descriptions, outcomes, and case-study detail." },
+      "label": { "displayName": "Operational Label", "purpose": "Navigation, categories, tags, indices, and calls to action." }
+    },
+    "shadows": [
+      { "name": "avatar-lift", "value": "0 38px 80px rgba(0, 0, 0, 0.44), 0 0 0 1px rgba(215, 226, 234, 0.25)", "purpose": "Separates the circular 3D portrait from the hero nameplate." },
+      { "name": "project-lift", "value": "0 32px 70px rgba(0, 0, 0, 0.42)", "purpose": "Supports the sticky project-card stack." },
+      { "name": "browser-lift", "value": "0 24px 58px rgba(0, 0, 0, 0.35)", "purpose": "Nests product previews inside project cards." },
+      { "name": "action-glow", "value": "0 12px 34px rgba(118, 33, 176, 0.28)", "purpose": "Signals the primary CTA without coloring the surrounding field." },
+      { "name": "modal-lift", "value": "0 30px 100px rgba(0, 0, 0, 0.55)", "purpose": "Establishes the focused project inspection layer." }
+    ],
+    "motion": [
+      { "name": "ease-editorial", "value": "cubic-bezier(0.25, 0.1, 0.25, 1)", "purpose": "Default easing for staged entrances, dialogs, and depth transitions." },
+      { "name": "state-fast", "value": "180ms ease", "purpose": "Link, border, text, and background state changes." },
+      { "name": "state-control", "value": "220ms", "purpose": "Button hover and press transforms." },
+      { "name": "entrance", "value": "800ms", "purpose": "Opacity, 28px rise, and 8px blur release for viewport content." },
+      { "name": "reduced-motion", "value": "0.01ms", "purpose": "Collapses animations and transitions when reduced motion is requested." }
+    ],
+    "breakpoints": [
+      { "name": "xs", "value": "420px" },
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Gradient Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The decisive portfolio action for viewing work, opening demos, or contacting Chang.",
+      "html": "<button class=\"ds-btn-primary\">VIEW MY WORK <svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M12 5v14M19 12l-7 7-7-7\"/></svg></button>",
+      "css": ".ds-btn-primary { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; gap: 0.6rem; padding: 0.8rem 1.25rem; border: 1px solid rgba(255,255,255,0.13); border-radius: 999px; color: var(--white, #fff); background: linear-gradient(123deg, #18011f 7%, var(--violet, #b600a8) 37%, #7621b0 72%, #be4c00 100%); box-shadow: 0 12px 34px rgba(118,33,176,0.28); font-family: Kanit, 'Noto Sans SC', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.11em; line-height: 1; text-transform: uppercase; transition: transform 220ms ease; } .ds-btn-primary svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; } .ds-btn-primary:hover { transform: scale(1.025); } .ds-btn-primary:active { transform: scale(0.985); } .ds-btn-primary:focus-visible { outline: 2px solid #e6a9f1; outline-offset: 4px; } @media (prefers-reduced-motion: reduce) { .ds-btn-primary { transition-duration: 0.01ms; } .ds-btn-primary:hover, .ds-btn-primary:active { transform: none; } }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "A restrained secondary action for case studies, resume download, and external links.",
+      "html": "<button class=\"ds-btn-outline\">CASE STUDY</button>",
+      "css": ".ds-btn-outline { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; gap: 0.6rem; padding: 0.8rem 1.25rem; border: 1px solid rgba(215,226,234,0.3); border-radius: 999px; color: var(--silver, #d7e2ea); background: rgba(255,255,255,0.035); font-family: Kanit, 'Noto Sans SC', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.11em; line-height: 1; text-transform: uppercase; transition: transform 220ms ease, background-color 180ms ease, border-color 180ms ease, color 180ms ease; } .ds-btn-outline:hover { transform: translateY(-2px); border-color: rgba(215,226,234,0.58); color: #fff; background: rgba(255,255,255,0.09); } .ds-btn-outline:active { transform: translateY(0); } .ds-btn-outline:focus-visible { outline: 2px solid #e6a9f1; outline-offset: 4px; } @media (prefers-reduced-motion: reduce) { .ds-btn-outline { transition-duration: 0.01ms; } .ds-btn-outline:hover { transform: none; } }"
+    },
+    {
+      "name": "Ruled Navigation Link",
+      "kind": "nav",
+      "refersTo": "navigation-link",
+      "description": "A compact uppercase anchor whose animated underline preserves the site's ruled editorial grammar.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link\" href=\"#projects\">PROJECTS</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: flex-end; padding: 1rem 0; border-bottom: 1px solid rgba(215,226,234,0.15); background: var(--ink, #0c0c0c); } .ds-nav-link { position: relative; padding: 4px 0; color: rgba(215,226,234,0.64); font-family: Kanit, sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.18em; text-decoration: none; transition: color 180ms ease; } .ds-nav-link::after { position: absolute; right: 0; bottom: -2px; left: 0; height: 1px; content: ''; background: #d7e2ea; transform: scaleX(0); transform-origin: right; transition: transform 240ms ease; } .ds-nav-link:hover { color: #fff; } .ds-nav-link:hover::after { transform: scaleX(1); transform-origin: left; } .ds-nav-link:focus-visible { outline: 2px solid #e6a9f1; outline-offset: 4px; border-radius: 6px; }"
+    },
+    {
+      "name": "Circular Icon Button",
+      "kind": "button",
+      "refersTo": "button-icon",
+      "description": "A 44px circular control for modal dismissal and other unambiguous icon actions.",
+      "html": "<button class=\"ds-icon-button\" aria-label=\"Close\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M18 6 6 18M6 6l12 12\"/></svg></button>",
+      "css": ".ds-icon-button { display: inline-flex; width: 44px; height: 44px; align-items: center; justify-content: center; border: 1px solid rgba(215,226,234,0.2); border-radius: 50%; color: var(--silver, #d7e2ea); background: rgba(255,255,255,0.04); transition: background-color 180ms ease; } .ds-icon-button svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; } .ds-icon-button:hover { background: rgba(255,255,255,0.1); } .ds-icon-button:active { background: rgba(255,255,255,0.06); } .ds-icon-button:focus-visible { outline: 2px solid #e6a9f1; outline-offset: 4px; }"
+    },
+    {
+      "name": "Project Evidence Card",
+      "kind": "card",
+      "refersTo": "project-card",
+      "description": "The dark, ruled container that pairs product claims and metrics with an inspectable preview.",
+      "html": "<article class=\"ds-project-card\"><div class=\"ds-project-meta\"><span>WEB PRODUCT / FULL-STACK</span><strong>01</strong></div><h3>健康教练预约与运营管理平台</h3><p>HEALTH COACH BOOKING &amp; OPERATIONS PLATFORM</p><div class=\"ds-project-metric\">0 → 1 / 3 ENDS / 5 PEOPLE</div></article>",
+      "css": ".ds-project-card { min-height: 420px; padding: clamp(1.25rem,3vw,3.5rem); overflow: hidden; border: 1px solid rgba(215,226,234,0.22); border-radius: 28px; color: var(--silver, #d7e2ea); background: #131313; box-shadow: 0 32px 70px rgba(0,0,0,0.42); font-family: 'Noto Sans SC', Kanit, sans-serif; } .ds-project-meta { display: flex; align-items: flex-start; justify-content: space-between; gap: 1.5rem; color: rgba(215,226,234,0.6); font-family: Kanit, sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; } .ds-project-meta strong { color: rgba(255,255,255,0.1); font-size: clamp(4.5rem,8vw,8rem); line-height: 0.68; letter-spacing: -0.035em; } .ds-project-card h3 { max-width: 18ch; margin: 2.25rem 0 0; color: #fff; font-size: clamp(1.85rem,3.7vw,4rem); line-height: 1.08; letter-spacing: -0.035em; } .ds-project-card > p { color: rgba(215,226,234,0.65); font-family: Kanit, sans-serif; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.08em; } .ds-project-metric { margin-top: 2rem; padding: 1.25rem 0; border-top: 1px solid rgba(255,255,255,0.15); border-bottom: 1px solid rgba(255,255,255,0.15); color: #fff; font-family: Kanit, sans-serif; font-size: 1.25rem; font-weight: 600; letter-spacing: 0.05em; }"
+    },
+    {
+      "name": "Intentional Media Placeholder",
+      "kind": "custom",
+      "description": "The atmospheric fallback that preserves layout when portfolio imagery is deliberately unavailable.",
+      "html": "<div class=\"ds-media-placeholder\" role=\"img\" aria-label=\"Project visual pending\"><span class=\"ds-placeholder-orbit\"></span><div class=\"ds-placeholder-copy\"><strong>MEMORYJAR</strong><span>VISUAL PENDING / LAYOUT READY</span></div></div>",
+      "css": ".ds-media-placeholder { position: relative; width: min(420px,100%); aspect-ratio: 14 / 9; overflow: hidden; border: 1px solid rgba(215,226,234,0.15); border-radius: 18px; color: #fff; background: radial-gradient(circle at 68% 26%, rgba(190,76,0,0.5), transparent 24%), radial-gradient(circle at 34% 66%, rgba(182,0,168,0.72), transparent 35%), linear-gradient(138deg,#110913 0%,#24142c 48%,#151515 100%); } .ds-placeholder-orbit { position: absolute; top: 18%; right: 10%; width: 46%; aspect-ratio: 1; border: 1px solid rgba(255,255,255,0.18); border-radius: 50%; box-shadow: inset 0 0 55px rgba(255,255,255,0.05),15px 22px 38px rgba(0,0,0,0.22); } .ds-placeholder-copy { position: absolute; right: 1.5rem; bottom: 1.5rem; left: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; } .ds-placeholder-copy strong { font-family: Kanit, sans-serif; font-size: clamp(1.5rem,4vw,2.25rem); letter-spacing: -0.02em; } .ds-placeholder-copy span { color: rgba(255,255,255,0.55); font-family: Kanit, sans-serif; font-size: 0.75rem; letter-spacing: 0.18em; }"
+    },
+    {
+      "name": "Capability Evidence Row",
+      "kind": "custom",
+      "description": "A paper-field row that aligns an index, capability title, and concise proof without a card enclosure.",
+      "html": "<article class=\"ds-capability-row\"><span>01</span><h3>AI PRODUCT</h3><p>把用户问题转化为可运行、可评测、可增长的产品系统。</p><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M7 7h10v10M7 17 17 7\"/></svg></article>",
+      "css": ".ds-capability-row { display: grid; grid-template-columns: auto 0.8fr 1.2fr auto; align-items: center; gap: 2rem; padding: 2.5rem 0; border-top: 1px solid rgba(12,12,12,0.15); color: var(--ink, #0c0c0c); background: var(--paper, #f5f4f0); font-family: 'Noto Sans SC', Kanit, sans-serif; transition: transform 250ms ease, background-color 250ms ease; } .ds-capability-row > span { color: rgba(12,12,12,0.6); font-family: Kanit, sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.18em; } .ds-capability-row h3 { margin: 0; font-family: Kanit, sans-serif; font-size: clamp(1.7rem,3.3vw,3.25rem); font-weight: 600; line-height: 1; letter-spacing: -0.02em; } .ds-capability-row p { max-width: 42rem; margin: 0; color: rgba(12,12,12,0.6); line-height: 1.75; } .ds-capability-row svg { width: 24px; height: 24px; fill: none; stroke: rgba(12,12,12,0.25); stroke-width: 2; transition: transform 300ms ease; } .ds-capability-row:hover { transform: translateX(0.5rem); background: rgba(12,12,12,0.035); } .ds-capability-row:hover svg { transform: translate(0.25rem,0.25rem); } @media (max-width: 767px) { .ds-capability-row { grid-template-columns: 1fr; gap: 1.25rem; padding: 2rem 0; } .ds-capability-row:hover { transform: none; background: transparent; } .ds-capability-row svg { display: none; } }"
+    },
+    {
+      "name": "Project Modal",
+      "kind": "custom",
+      "description": "The focused inspection surface for live products, demos, and case studies.",
+      "html": "<div class=\"ds-modal-scrim\"><section class=\"ds-modal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ds-modal-title\"><header><div><span>WEB PRODUCT</span><h2 id=\"ds-modal-title\">CASE STUDY</h2></div><button class=\"ds-modal-close\" aria-label=\"Close\">×</button></header><div class=\"ds-modal-body\">Focused project evidence appears here.</div></section></div>",
+      "css": ".ds-modal-scrim { display: flex; min-height: 520px; align-items: center; justify-content: center; padding: 1.5rem; background: rgba(0,0,0,0.82); backdrop-filter: blur(4px); } .ds-modal { width: min(100%,72rem); max-height: 94vh; overflow: auto; border: 1px solid rgba(255,255,255,0.2); border-radius: 24px; color: var(--silver, #d7e2ea); background: #111; box-shadow: 0 30px 100px rgba(0,0,0,0.55); font-family: 'Noto Sans SC', Kanit, sans-serif; } .ds-modal header { position: sticky; top: 0; display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.75rem; border-bottom: 1px solid rgba(255,255,255,0.15); background: rgba(17,17,17,0.95); backdrop-filter: blur(12px); } .ds-modal header span { color: rgba(215,226,234,0.6); font-size: 0.625rem; font-weight: 500; letter-spacing: 0.22em; } .ds-modal h2 { margin: 0.25rem 0 0; font-family: Kanit, sans-serif; font-size: 1.5rem; font-weight: 600; } .ds-modal-close { width: 44px; height: 44px; border: 1px solid rgba(215,226,234,0.2); border-radius: 50%; color: #d7e2ea; background: rgba(255,255,255,0.04); font-size: 1.5rem; } .ds-modal-close:hover { background: rgba(255,255,255,0.1); } .ds-modal-close:focus-visible { outline: 2px solid #e6a9f1; outline-offset: 4px; } .ds-modal-body { min-height: 280px; padding: clamp(1.25rem,4vw,3rem); color: rgba(215,226,234,0.75); line-height: 2; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The AI Product Operating System",
+    "overview": "This portfolio presents Chang's work as a precise, inspectable product system rather than a conventional résumé or generic technology landing page. Near-black and off-white editorial fields create a deliberate reading cadence; oversized silver Kanit headings announce each layer while fine rules organize proof, metrics, and supporting copy with almost schematic clarity.\n\nThe world is restrained but not sterile. A centered 3D avatar interrupts the hero nameplate, dark product surfaces stack like working instruments, and violet-to-orange energy is reserved for decisive actions and media atmospheres. Chinese detail remains highly legible in Noto Sans SC while compact English labels provide navigation, indexing, and system texture.",
+    "keyCharacteristics": [
+      "Alternating near-black and off-white editorial fields.",
+      "Oversized, tightly tracked Kanit typography paired with calm Chinese body copy.",
+      "Crisp ruled evidence, large numeric indices, and metric-first project framing.",
+      "A centered 3D portrait used as a deliberate interruption, not decoration.",
+      "Restrained violet-to-orange energy reserved for action and media.",
+      "Motion that supports entry, scanning, and depth, with a complete reduced-motion path."
+    ],
+    "rules": [
+      { "name": "The Chromatic Rarity Rule", "body": "Violet and ember belong to decisive actions, selected states, and media atmosphere; they never become broad section fills.", "section": "colors" },
+      { "name": "The Two-Field Rule", "body": "Major narrative shifts happen through Field Ink and Warm Paper, while the silver/ink text relationship inverts with the field.", "section": "colors" },
+      { "name": "The Split-Language Rule", "body": "Use Kanit for English display, labels, and system indexing; use Noto Sans SC for substantive Chinese reading and product evidence.", "section": "typography" },
+      { "name": "The Nameplate Rule", "body": "Large display text is a structural surface, not an ornamental headline: keep it tightly tracked, uppercase, and visibly anchored to the viewport or section edge.", "section": "typography" },
+      { "name": "The Ruled Evidence Rule", "body": "Prefer border lines, spacing, and alignment over nested panels when structuring experience, capability, and metric content.", "section": "layout" },
+      { "name": "The Instrument Depth Rule", "body": "Elevation belongs to interactive product instruments and the portrait; editorial fields and evidence rows remain flat.", "section": "elevation" },
+      { "name": "The Radius by Mass Rule", "body": "Use circular or pill geometry for compact controls, 18–24px corners for contained media and dialogs, and 28–52px corners only for large project or section surfaces.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do alternate Field Ink and Warm Paper to pace the story and signal a real change in evidence type.",
+      "Do make measurable outcomes, project roles, and product proof easy to scan through rules, indices, and disciplined lanes.",
+      "Do preserve the hero's three-part composition: edge-to-edge nameplate, centered circular avatar, and bottom proof/action anchors.",
+      "Do reserve violet-to-orange energy for decisive actions, selection, and intentional media atmosphere.",
+      "Do provide visible focus, 44px touch targets, intentional media fallbacks, and a complete reduced-motion experience.",
+      "Do let Chinese copy carry substance while English Kanit carries navigation, naming, and editorial identity."
+    ],
+    "donts": [
+      "Don't turn the portfolio into a conventional résumé page, generic startup landing page, or grid of interchangeable feature cards.",
+      "Don't spread accent color across full sections or use competing gradients; chromatic rarity is part of the hierarchy.",
+      "Don't soften every surface with the same radius or shadow; depth and curvature must correspond to component mass and purpose.",
+      "Don't replace the crisp ruled evidence system with excessive containers, badges, or decorative dividers.",
+      "Don't animate merely to decorate, and never preserve scroll transforms, magnetic response, or staged reveals when reduced motion is requested.",
+      "Don't allow missing media to collapse layout, trigger broken requests, or look like unfinished implementation."
+    ]
+  }
+}

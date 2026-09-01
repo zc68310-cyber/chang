@@ -1,0 +1,360 @@
+Build a complete, polished personal portfolio website for Chang Zhou (周畅), an AI Product Manager and AI-native builder seeking product roles in China.
+
+IMPORTANT WORKFLOW
+- Work directly in the current project directory.
+- If the directory is empty apart from `.idea`, this prompt file, and supplied assets, scaffold a Vite + React + TypeScript project in the current directory. Do not create an extra nested project folder and do not delete `.idea`.
+- If `chang-3d-avatar.png` or `Chang-Zhou-Resume.pdf` is initially placed in the project root, move/copy it into the required `public/assets/` or `public/resume/` location and keep the site reference working.
+- Use React, TypeScript, Tailwind CSS, Motion for React (`motion/react`, formerly Framer Motion), and Lucide React.
+- Install and configure all required dependencies yourself.
+- Keep all editable portfolio content in one typed data file such as `src/data/portfolio.ts` so it can be changed later without editing component code.
+- Use reusable, clearly named components rather than one oversized App component.
+- Do not ask follow-up questions. If a local image, resume, screenshot, GitHub URL, or Bilibili BV ID is not available, create a tasteful working placeholder and document exactly where it should be replaced.
+- Do not hotlink any portrait, project image, GIF, or decorative image from MotionSites, Figma, Higgsfield, or other third-party portfolio websites.
+- After implementation, run the production build, fix all errors, and report the commands used and the remaining asset placeholders.
+
+TECH STACK
+- Vite
+- React + TypeScript
+- Tailwind CSS
+- Motion for React (`motion` package, imports from `motion/react`)
+- Lucide React
+- Google Fonts: Kanit (300-900) for large English display text and Noto Sans SC (300-900) for Chinese copy
+
+SITE IDENTITY
+- Browser title: `Chang Zhou — AI Product Manager`
+- Language: Chinese content with large English section titles.
+- Primary audience: recruiters and hiring managers in China hiring for AI Product Manager, B2B Product Manager, AI Product Operations, solutions, and related roles.
+- The site should feel like a premium creative portfolio, not a conventional resume page and not an overdecorated AI-generated landing page.
+- English provides the visual identity; Chinese communicates the actual information.
+
+GLOBAL DESIGN SYSTEM
+- Main background: `#0C0C0C`
+- Primary light text: `#D7E2EA`
+- White section background: `#F5F4F0` or `#FFFFFF`
+- Dark text: `#0C0C0C`
+- Muted border: `rgba(215, 226, 234, 0.22)` on dark backgrounds and `rgba(12, 12, 12, 0.15)` on light backgrounds
+- Display gradient: `linear-gradient(180deg, #646973 0%, #BBCCD7 100%)`
+- CTA gradient: `linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%)`
+- English display font: Kanit
+- Chinese/body font: Noto Sans SC
+- Root font stack: `'Kanit', 'Noto Sans SC', sans-serif`
+- Use very large editorial typography, generous negative space, strong contrast, rounded section transitions, and restrained violet highlights.
+- Main wrapper must use `overflow-x: clip`.
+- Add smooth scrolling, visible keyboard focus states, and `prefers-reduced-motion` support.
+- Animations should feel polished and deliberate. Avoid excessive floating particles, glowing blobs, generic gradients, or constant movement.
+
+PAGE ORDER
+1. HeroSection
+2. WorkMarqueeSection
+3. AboutSection
+4. ExperienceSection
+5. ProjectsSection
+6. CapabilitiesSection
+7. ContactSection / Footer
+
+1. HERO SECTION
+Create a full-viewport `h-screen` hero with a dark background and a layered editorial composition.
+
+Navbar:
+- Four anchor links: `ABOUT`, `EXPERIENCE`, `PROJECTS`, `CONTACT`
+- Use `justify-between`, uppercase Kanit, wide tracking, and responsive sizing.
+- Add smooth anchor navigation.
+- On mobile, keep the links compact and horizontally scrollable if necessary; do not hide navigation behind a complicated menu.
+
+Hero heading:
+- Exact text: `Hi, i'm chang`
+- Preserve this capitalization and wording.
+- Render it in a massive uppercase visual treatment using the display gradient.
+- Use `font-black`, tight tracking, `leading-none`, `whitespace-nowrap`, and fluid font sizes around `14vw-17.5vw`.
+- Ensure it stays readable and does not clip on mobile.
+
+Hero supporting copy, bottom-left:
+- English label: `AI PRODUCT MANAGER / AI-NATIVE BUILDER`
+- Chinese line: `从用户问题与业务目标出发，把 AI 能力转化为可运行、可评测、可增长的产品。`
+- Keep the copy compact, uppercase English first and Chinese underneath.
+
+Hero CTA, bottom-right:
+- Primary label: `VIEW MY WORK`
+- Scroll to `#projects`.
+- Use the violet-magenta-orange gradient pill treatment from the original design.
+- Add a smaller secondary text link: `下载简历 ↗`, pointing to `/resume/Chang-Zhou-Resume.pdf`. If the PDF is missing, keep the link visually present but prevent a broken navigation and add a clear code comment explaining where to place it.
+
+Hero character:
+- Use `/assets/chang-3d-avatar.png`.
+- This asset will be a transparent floating 3D cartoon head with oversized eyes and half-rim glasses.
+- Center it absolutely over the giant heading and use it as the main visual focal point.
+- Do not generate or substitute a different human portrait.
+- If the file is not present, show a well-proportioned circular placeholder labeled `3D AVATAR` without breaking the layout.
+- Wrap it in a reusable `Magnet` component with subtle cursor-follow movement on pointer devices only.
+- Disable the magnetic effect on touch devices and when reduced motion is enabled.
+- Suggested width: `w-[250px] sm:w-[330px] md:w-[410px] lg:w-[480px]`.
+- Use restrained fade/scale entrance animation. Do not bounce.
+
+Hero entrance sequence:
+- Navbar: delay 0, y -20
+- Heading: delay 0.15, y 40
+- Supporting copy: delay 0.35, y 20
+- CTA: delay 0.5, y 20
+- Avatar: delay 0.6, y 25, scale 0.94 to 1
+
+2. WORK MARQUEE SECTION
+Keep the original two-row horizontal scroll concept, but make it a reel of Chang's real work rather than unrelated external portfolio GIFs.
+
+- Heading/eyebrow above the reel: `SELECTED WORK / 2025—2026`
+- Create two continuously composed rows driven by page scroll position: row 1 moves right and row 2 moves left.
+- Each tile should be approximately 420 x 270px on desktop with rounded-2xl corners and responsive smaller sizes on mobile.
+- Source images from `/assets/marquee/` through the central portfolio data file.
+- Use filenames such as `xiaohongshu-workflow.webp`, `attribution-agent.webp`, `demand-board.webp`, `douyin-coupon.webp`, `xigui-content-workflow.webp`, `health-platform.webp`, `memoryjar.webp`, and additional numbered placeholders.
+- When an image is missing, render an intentional gradient placeholder card with a short label instead of a broken image.
+- Labels may include: `AGENT`, `WORKFLOW`, `RAG`, `LLM EVALUATION`, `PRODUCT GROWTH`, `VIBE CODING`, `IoT`, `MVP`.
+- Lazy-load images and use `will-change: transform` carefully.
+- Do not use the 21 MotionSites GIF URLs from the reference prompt.
+
+3. ABOUT SECTION
+Create a full-height centered dark section with the huge English heading `ABOUT ME`.
+
+Main animated Chinese paragraph, exact copy:
+`我是一名兼具产品思维、AI 工程与开发能力的 AI 产品经理，关注如何从真实业务问题出发，将大模型、Agent 与 Workflow 转化为可运行、可评测、可增长的产品。曾在小红书、字节跳动与熙硅科技参与内容治理、电商用户产品和 AI 商业化实践，也能够通过 Vibe Coding 独立完成 Web、云端与 IoT 原型开发。`
+
+- Animate the paragraph character by character from opacity 0.18 to 1 based on scroll progress.
+- Keep Chinese line breaking natural; never split English terms into individual letters across lines.
+- Add a compact metadata row below it:
+  - `MONASH UNIVERSITY`
+  - `BACHELOR OF INFORMATION TECHNOLOGY`
+  - `GPA 3.60 / 4.00`
+  - `GRADUATING 2027`
+- Replace the original moon/Lego/random 3D decorations with four restrained floating glass cards containing `AGENT`, `PRODUCT`, `0→1`, and `MVP`.
+- The cards should move in subtly from the corners, remain legible, and never overlap the paragraph on mobile.
+
+4. EXPERIENCE SECTION
+Replace the original white `SERVICES` section with a white `EXPERIENCE` section.
+
+- Large heading: `EXPERIENCE`
+- Small Chinese subtitle: `实习经历`
+- Use three oversized numbered experience rows separated by subtle 1px borders.
+- Each row must show number, company/team, role, location, dates, concise narrative, key impact metrics, and relevant tags.
+- Desktop: number on the left and details on the right.
+- Mobile: stack cleanly and reduce the number size without losing hierarchy.
+- Animate rows into view with staggered FadeIn.
+
+EXPERIENCE 01
+Company: `小红书｜社区 Agentic 智能运营组`
+English label: `XIAOHONGSHU`
+Role: `AI 产品经理`
+Location/date: `上海 · 2026.03—2026.07`
+Summary: `围绕社区内容质量治理，参与质检象限 Skill 工具开发与产运机制建设，推动质检流程从人工驱动向 AI 转型。`
+Highlights:
+- `主导搭建 Dify 审核工作流，将规则细则拆分为 18 个 LLM 判定器并行研判，并结合正则词库、Prompt Engineering 与 RAG 知识库持续优化，准确率由 56% 提升至 95%。`
+- `主导归因 Agent 全链路方案设计与开发，三级标签准确率由 65% 提升至 95%，CoT 输出质量由 3 分提升至 4.5 分。`
+- `整体笔记机审处置占比由 65% 提升至 76.85%，Case 免审率由 54.23% 提升至 74.15%，归因环节人力提效 50%，内部 5+ 团队投入使用。`
+Tags: `Dify`, `Agent`, `RAG`, `LLM Evaluation`, `Bad Case`, `Workflow`
+
+EXPERIENCE 02
+Company: `字节跳动｜抖音商城用户产品部`
+English label: `BYTEDANCE`
+Role: `用户产品实习生`
+Location/date: `上海 · 2025.12—2026.02`
+Summary: `围绕抖音商城膨胀券玩法，优化 C 端推荐、补贴与展示策略，在维持转化率的基础上提升用户渗透与 GMV。`
+Highlights:
+- `拓展首页弹窗、优惠券 Banner 与营销横幅等入口，并设计潜客与非潜客差异化券门槛和补贴策略。`
+- `膨胀页日均访问 UV 由 25 万提升至 43 万，日均权益核销 UV 由 8.8 万提升至 14.4 万，端内 DAU 渗透提升 2.4pp。`
+- `优化商品供给与推荐分发后，膨胀页订单金额提升 151%，人均支付 GMV 提升 0.89%，笔单价由 0.9 元提升至 2.9 元。`
+Tags: `Growth`, `C-end Product`, `A/B Testing`, `Recommendation`, `GMV`
+
+EXPERIENCE 03
+Company: `熙硅科技｜AI 内容业务`
+English label: `XIGUI TECHNOLOGY`
+Role: `AI 产品运营（内容增长方向）`
+Location/date: `北京 · 2025.06—2025.09`
+Summary: `负责面向职场白领与超级个体的 AI 工作台商业化验证，完成需求洞察、产品卖点设计、AI 内容生产工作流、实验评测与付费转化闭环。`
+Highlights:
+- `基于历史出单内容、竞品账号和高低表现样本建立需求地图，完成产品定位、卖点分层及 13 张商品详情页设计。`
+- `将内容生产拆解为六阶段工作流，沉淀写作、渲染、内容调研和详情页生成等 5 个可复用 AI Skill。`
+- `工作流累计支撑 6 个账号生产并投放 960 条内容，归因成交 87 单，实现 GMV 14,616 元。`
+Tags: `AI Workflow`, `Skill`, `Content Growth`, `Evaluation`, `Commercialization`
+
+Experience interaction:
+- Keep each row concise by default.
+- Add an accessible `展开详情 / 收起` control for the highlights on smaller screens.
+- On desktop, the important metrics should remain visible without requiring hover.
+
+5. PROJECTS SECTION
+Create a dark section with rounded top corners, pulled slightly over the white Experience section.
+
+- Large heading: `SELECTED PROJECTS`
+- Small Chinese subtitle: `项目作品`
+- Use two sticky stacking project cards, not three.
+- Cards scale down slightly as the next one overlaps using `useScroll` and `useTransform`.
+- Each card needs a large number, category, title, concise description, role, date, tags, metrics/outcome, media preview, and CTA.
+- Use heavy rounded corners and a restrained silver outline.
+- Mobile must switch to normal document flow if sticky cards would cause clipping or excessive scrolling.
+
+PROJECT 01
+Number: `01`
+Category: `WEB PRODUCT / FULL-STACK`
+Title: `健康教练预约与运营管理平台`
+English title: `HEALTH COACH BOOKING & OPERATIONS PLATFORM`
+Role/date: `Vibe Coding 全栈开发 · 2026.03—2026.05`
+Description: `面向真实健康教练客户，带领 5 人团队从 0 到 1 搭建用户、教练与管理员三端平台，将课程预约、教练排期、客户记录、通知、账单支付与后台管理流程线上化。`
+Highlights:
+- `访谈 10 名课程学员、健身用户及教练，构建用户画像与用户故事地图，规划三端核心流程与迭代优先级。`
+- `基于 Figma 高保真原型，使用 CakePHP、PHP 与 MySQL 完成产品开发、测试与部署。`
+- `协调 5 人团队完成两轮迭代，最终交付可运行 MVP 并获得客户验收认可。`
+Tags: `Vibe Coding`, `CakePHP`, `PHP`, `MySQL`, `Figma`, `Agile`
+Live URL: `https://review.u26s1157.iedev.org/team157-app_fit3047/`
+
+Project 01 media behavior:
+- Display a realistic browser-frame preview using a local screenshot placeholder at `/assets/projects/health-platform-cover.webp`.
+- Add buttons `LIVE PREVIEW` and `CASE STUDY`.
+- `LIVE PREVIEW` opens an accessible full-screen modal and only then lazy-loads the live site in an iframe.
+- Also include `OPEN IN NEW TAB ↗` as a fallback.
+- If the remote site refuses iframe embedding through CSP or X-Frame-Options, show a friendly fallback state rather than an empty frame.
+- The main page must not load the remote iframe before the user clicks.
+
+PROJECT 02
+Number: `02`
+Category: `IoT PRODUCT / HARDWARE`
+Title: `MemoryJar 智能语音记忆罐`
+English title: `MEMORYJAR — A SCREENLESS VOICE KEEPSAKE`
+Role/date: `硬件端产品设计 & IoT 开发 · 2025.09—2025.11`
+Description: `面向留学生、异地伴侣及长期离家人群，主导无屏情感沟通硬件从 0 到 1 设计，通过“远程录音—云端传输—开盖播放”的实体交互，将数字语音转化为具有仪式感的情感体验。`
+Highlights:
+- `分析 Lovebox、Bond Touch 与 Friendship Lamp，确定“语音传递 + 无屏交互 + 开盖触发”的差异化方向。`
+- `基于 ESP32、霍尔传感器、MAX98357A、扬声器和 LED 完成硬件系统，并打通 Web—Supabase/Firebase—硬件数据链路。`
+- `独立完成电路、固件、云端联调和木质外壳制作，最终交付可运行的端云一体原型。`
+Tags: `ESP32`, `IoT`, `Supabase`, `Firebase`, `Hardware Prototype`, `Product Design`
+Video short URL: `https://b23.tv/HZPSCZk`
+
+Project 02 media behavior:
+- Use `/assets/projects/memoryjar-cover.webp` as the initial poster.
+- Build a reusable video modal/player component.
+- Do not place the `b23.tv` short URL directly inside an iframe.
+- Define an optional `bilibiliBvid` field in the data model. When a BV ID is later supplied, embed `https://player.bilibili.com/player.html?bvid={BVID}&page=1&high_quality=1&danmaku=0`.
+- Until the BV ID is supplied, clicking `WATCH DEMO` should open the short URL in a new tab and the modal should explain that the embedded player is awaiting the full Bilibili video ID.
+- Never autoplay video and preserve a 16:9 aspect ratio.
+
+6. CAPABILITIES SECTION
+Add a restrained dark or off-white section with the huge heading `CAPABILITIES` and Chinese subtitle `专业能力`.
+
+Display five capability groups as large typographic rows or a clean editorial grid:
+
+01 PRODUCT
+`用户调研、需求分析与管理、PRD、用户故事地图、产品原型、敏捷项目管理`
+
+02 AI ENGINEERING
+`Prompt Engineering、LLM 评测、RAG、Dify Agent、Bad Case 分析、Agent 与 Skill 开发`
+
+03 DATA
+`SQL、Python、Excel、运营数据分析、数据看板、A/B 测试设计与复盘`
+
+04 DEVELOPMENT
+`PHP、CakePHP、MySQL、JavaScript、ESP32、Git、产品原型开发、测试与部署`
+
+05 DESIGN
+`Figma、XMind、Canva、Photoshop、高保真原型、视觉素材与短视频制作`
+
+- Avoid progress bars, arbitrary percentages, glowing skill pills, or fake expertise scores.
+- Use typography, spacing, and subtle hover transitions instead.
+
+7. CONTACT SECTION / FOOTER
+Create a memorable full-height closing section with a dark background and large display typography.
+
+- Large heading: `LET'S BUILD SOMETHING USEFUL.`
+- Chinese line: `期待与你一起，把复杂问题变成真正可用的产品。`
+- Primary CTA: `CONTACT ME`
+- Email: `3482358524@qq.com`
+- Use a `mailto:` link.
+- Secondary CTA: `下载简历 ↗`
+- Do not display the phone number publicly on the landing page; it remains available in the downloadable resume.
+- Add optional GitHub and LinkedIn fields in the data file, but hide their buttons automatically when values are empty.
+- Footer: `© 2026 Chang Zhou. Designed and built with AI.`
+
+REUSABLE COMPONENTS
+
+`FadeIn`
+- Motion wrapper using `whileInView`.
+- `viewport={{ once: true, margin: '-50px', amount: 0.15 }}`.
+- Accept delay, duration, x, and y.
+- Easing around `[0.25, 0.1, 0.25, 1]`.
+
+`Magnet`
+- Mouse-following magnetic hover effect.
+- Use pointer distance from element center and a low movement strength.
+- Activate only for fine pointers.
+- Smoothly return to origin.
+- Disable for reduced motion and touch devices.
+
+`AnimatedText`
+- Character-level opacity reveal driven by scroll progress.
+- Preserve spaces and punctuation.
+- Ensure screen readers receive one clean full sentence instead of reading duplicated animated characters.
+
+`GradientButton`
+- Rounded pill with the violet/magenta/orange gradient.
+- White uppercase label, clear focus ring, modest hover scale.
+
+`OutlineButton`
+- Silver outline pill with subtle translucent hover background.
+
+`ProjectModal`
+- Accessible dialog with focus trap, Escape-to-close, background scroll lock, close button, and responsive media area.
+- Support `iframe`, `bilibili`, and fallback-link modes.
+
+CONTENT ARCHITECTURE
+- Put experience, projects, capabilities, navigation links, contact data, and asset paths in `src/data/portfolio.ts`.
+- Use TypeScript interfaces for Experience, Project, and Capability.
+- Do not scatter resume text across JSX files.
+
+SUGGESTED COMPONENT STRUCTURE
+- `src/components/HeroSection.tsx`
+- `src/components/WorkMarqueeSection.tsx`
+- `src/components/AboutSection.tsx`
+- `src/components/ExperienceSection.tsx`
+- `src/components/ProjectsSection.tsx`
+- `src/components/CapabilitiesSection.tsx`
+- `src/components/ContactSection.tsx`
+- `src/components/ui/FadeIn.tsx`
+- `src/components/ui/Magnet.tsx`
+- `src/components/ui/AnimatedText.tsx`
+- `src/components/ui/GradientButton.tsx`
+- `src/components/ui/ProjectModal.tsx`
+- `src/data/portfolio.ts`
+
+RESPONSIVE REQUIREMENTS
+- Mobile-first implementation.
+- Default breakpoints: sm 640px, md 768px, lg 1024px.
+- Use `clamp()` for large typography.
+- Prevent all horizontal overflow.
+- On mobile, ensure the avatar does not cover the Chinese supporting copy or CTA.
+- Convert the two-column project media to a single-column layout.
+- Disable sticky project cards when the viewport height or width makes them unusable.
+- Keep buttons at least 44px tall.
+
+ACCESSIBILITY AND PERFORMANCE
+- Semantic sections and heading hierarchy.
+- Keyboard-operable navigation, modals, buttons, and disclosure controls.
+- Visible focus states.
+- Meaningful alt text for real images; decorative items should use empty alt text.
+- Respect `prefers-reduced-motion` and provide a usable no-motion experience.
+- Lazy-load non-critical images and remote iframes.
+- Avoid layout shifts by reserving media aspect ratios.
+- Avoid unnecessary re-renders from scroll listeners; prefer Motion values or requestAnimationFrame throttling.
+- External links use `target='_blank'` and `rel='noopener noreferrer'`.
+
+ASSET PLACEHOLDERS TO SUPPORT
+- `public/assets/chang-3d-avatar.png`
+- `public/assets/projects/health-platform-cover.webp`
+- `public/assets/projects/memoryjar-cover.webp`
+- `public/assets/marquee/*`
+- `public/resume/Chang-Zhou-Resume.pdf`
+
+FINAL ACCEPTANCE CHECKS
+- Site starts locally with `npm run dev`.
+- `npm run build` completes without errors.
+- No broken images or uncaught console errors when optional assets are absent.
+- Navigation anchors work.
+- Reduced-motion mode works.
+- Project 01 modal opens, lazy-loads the live site, and provides a new-tab fallback.
+- Project 02 has a working Bilibili fallback link and is ready for a BV ID.
+- All facts and metrics match the supplied portfolio data above.
+- The result feels like the original bold 3D MotionSites portfolio layout, but the identity, content, media, and UX are genuinely tailored to Chang Zhou as an AI Product Manager.
